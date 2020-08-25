@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Orders>
+  <Order>
+    <totalPrice>2310</totalPrice>
+    <HostingUnitKey>10000001</HostingUnitKey>
+    <GuestRequestKey>10000002</GuestRequestKey>
+    <OrderKey>10000001</OrderKey>
+    <Status>closedResponse</Status>
+    <CreateDate>2020-02-09T00:00:00+02:00</CreateDate>
+    <OrderDate>09/02/2020 00:00:00</OrderDate>
+  </Order>
+  <Order>
+    <totalPrice>1275</totalPrice>
+    <HostingUnitKey>10000001</HostingUnitKey>
+    <GuestRequestKey>10000001</GuestRequestKey>
+    <OrderKey>10000002</OrderKey>
+    <Status>emailSent</Status>
+    <CreateDate>2020-02-09T00:00:00+02:00</CreateDate>
+    <OrderDate>09/02/2020 00:00:00</OrderDate>
+  </Order>
+  <Order>
+    <totalPrice>2700</totalPrice>
+    <HostingUnitKey>10000001</HostingUnitKey>
+    <GuestRequestKey>10000005</GuestRequestKey>
+    <OrderKey>10000003</OrderKey>
+    <Status>emailSent</Status>
+    <CreateDate>2020-02-09T00:00:00+02:00</CreateDate>
+    <OrderDate>09/02/2020 00:00:00</OrderDate>
+  </Order>
+  <Order>
+    <totalPrice>6480</totalPrice>
+    <HostingUnitKey>10000001</HostingUnitKey>
+    <GuestRequestKey>10000006</GuestRequestKey>
+    <OrderKey>10000004</OrderKey>
+    <Status>emailSent</Status>
+    <CreateDate>2020-02-09T00:00:00+02:00</CreateDate>
+    <OrderDate>09/02/2020 00:00:00</OrderDate>
+  </Order>
+</Orders>
