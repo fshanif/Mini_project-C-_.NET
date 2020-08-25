@@ -1,0 +1,321 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CDEA83F7-8F25-4619-BAAB-7DE131109CD8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>UI</RootNamespace>
+    <AssemblyName>UI</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="clientListWindow.xaml.cs">
+      <DependentUpon>clientListWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="deleteHostingUnitWindow.xaml.cs">
+      <DependentUpon>deleteHostingUnitWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="givezion.xaml.cs">
+      <DependentUpon>givezion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="grbygetint.xaml.cs">
+      <DependentUpon>grbygetint.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="grlistbyarea.xaml.cs">
+      <DependentUpon>grlistbyarea.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="grlistbynumpeople.xaml.cs">
+      <DependentUpon>grlistbynumpeople.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="grnumpeopleUserControl.xaml.cs">
+      <DependentUpon>grnumpeopleUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="groupByMaxPeople.xaml.cs">
+      <DependentUpon>groupByMaxPeople.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="groupingListsWindow.xaml.cs">
+      <DependentUpon>groupingListsWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GuestRequestUserControl.xaml.cs">
+      <DependentUpon>GuestRequestUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="hostbynumofhu.xaml.cs">
+      <DependentUpon>hostbynumofhu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="hostUserControl.xaml.cs">
+      <DependentUpon>hostUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="hUgruopUserControl.xaml.cs">
+      <DependentUpon>hUgruopUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="hulistbysubarea.xaml.cs">
+      <DependentUpon>hulistbysubarea.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="inpersonalArea.xaml.cs">
+      <DependentUpon>inpersonalArea.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="myhu.xaml.cs">
+      <DependentUpon>myhu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="orderListWindow.xaml.cs">
+      <DependentUpon>orderListWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ordersWindow.xaml.cs">
+      <DependentUpon>ordersWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="updateHostingUnitWindow.xaml.cs">
+      <DependentUpon>updateHostingUnitWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="updateOrderStatusWindow.xaml.cs">
+      <DependentUpon>updateOrderStatusWindow.xaml</DependentUpon>
+    </Compile>
+    <Page Include="clientListWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="clientWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="deleteHostingUnitWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="feeConcluded.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="givezion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="grbygetint.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="grlistbyarea.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="grlistbynumpeople.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="grnumpeopleUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="groupByMaxPeople.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="groupingListsWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GuestRequestUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="hostbynumofhu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="hostUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="hostWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="hUgruopUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="hulistbysubarea.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="inpersonalArea.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clientWindow.xaml.cs">
+      <DependentUpon>clientWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="feeConcluded.xaml.cs">
+      <DependentUpon>feeConcluded.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="hostWindow.xaml.cs">
+      <DependentUpon>hostWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="managerWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="manegerwind.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="myhu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="openWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="orderListWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ordersWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="updateHostingUnitWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="updateOrderStatusWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="managerWindow.xaml.cs">
+      <DependentUpon>managerWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="manegerwind.xaml.cs">
+      <DependentUpon>manegerwind.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="openWindow.xaml.cs">
+      <DependentUpon>openWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BE\BE.csproj">
+      <Project>{12d255a1-e5ed-480a-893c-b9e4903d5514}</Project>
+      <Name>BE</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BL\BL.csproj">
+      <Project>{6ef464a0-fdc9-4ca5-8f91-07b8cda7e1cc}</Project>
+      <Name>BL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\egds.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\מצגת1.jpg" />
+    <Resource Include="Images\פרסומת שלמה.gif" />
+    <Resource Include="Images\רנגרים.gif" />
+    <Resource Include="Images\פרסומת.jpg" />
+    <Resource Include="Images\כרטיס ביקור רישמי.jpg" />
+    <Resource Include="rate\2.png" />
+    <Resource Include="rate\3.png" />
+    <Resource Include="rate\4.png" />
+    <Resource Include="rate\5.png" />
+    <Resource Include="rate\אנלייק.jpg" />
+    <Resource Include="rate\כתר2.gif" />
+    <Resource Include="rate\כתר3.jpg" />
+    <Resource Include="rate\1.png" />
+    <Resource Include="Images\x.jpg" />
+    <Resource Include="Images\פח2.jpg" />
+    <Resource Include="Images\lightblue.jpg" />
+    <Resource Include="Images\arrow.png" />
+    <Resource Include="Images\arrow3.png" />
+    <Resource Include="Images\arrow2.png" />
+    <Resource Include="Images\arrow4.png" />
+    <Resource Include="Images\12.gif" />
+    <Resource Include="Images\gmail.jpg" />
+    <Content Include="Images\like.jpg" />
+    <Resource Include="Images\Save.png" />
+    <Resource Include="Images\prxun,.jpg" />
+    <Content Include="Images\Update1.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

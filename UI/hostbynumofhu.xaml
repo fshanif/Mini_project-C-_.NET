@@ -1,0 +1,23 @@
+﻿<Window x:Class="UI.hostbynumofhu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UI"
+        mc:Ignorable="d"
+        Title="hostbynumofhu" Height="450" Width="1000" WindowStartupLocation="CenterScreen" WindowStyle="None">
+
+    <ScrollViewer>
+
+        <StackPanel x:Name="hugroupingbyarea" Background="LightBlue" >
+            <Grid>
+                <Button  Content="חזרה" x:Name="button_back"  HorizontalAlignment="Left" Background="Transparent" BorderBrush="Transparent" FontWeight="Bold" Foreground="white" FontSize="25"   Width="78"  Margin="819,0,0,-0.2" Click="button_back_Click" RenderTransformOrigin="0.5,0.503" Height="37" VerticalAlignment="Top"  />
+                <Button x:Name="button_close"  VerticalAlignment="Top"  HorizontalAlignment="Right" Background="Transparent" BorderBrush="Transparent" FontWeight="Bold" Foreground="White" FontSize="25" Content="סגור"   Width="75" Click="button_close_Click" RenderTransformOrigin="0.572,-0.457"/>
+            </Grid>
+            <Label x:Name="label" Content="כל המארחים לפי מספר בתי אירוח:" HorizontalAlignment="Center" Margin="54,10,0,0" VerticalAlignment="Center" Foreground="White" FontSize="50" Width="740" Height="66"/>
+
+
+
+        </StackPanel>
+    </ScrollViewer>
+</Window>

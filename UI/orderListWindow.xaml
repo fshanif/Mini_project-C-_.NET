@@ -1,0 +1,98 @@
+﻿<Window x:Class="UI.orderListWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UI"
+        mc:Ignorable="d"
+        Title="orderListWindow"   Height="625.467" Width="794.666"  WindowStartupLocation="CenterScreen" WindowStyle="None" AllowsTransparency="True">
+    <Window.Resources>
+        <Style x:Key="myButtonStyle" TargetType="Button">
+            <Setter Property="FontSize" Value="25" />
+            <Setter Property="FontFamily" Value="HP Simplified" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="BorderBrush" Value="Black" />
+        </Style>
+        <Style x:Key="mytxtStyle" TargetType="TextBox">
+            <Setter Property="FontSize" Value="15" />
+            <Setter Property="FontFamily" Value="HP Simplified" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="BorderBrush" Value="Black" />
+        </Style>
+        <Style x:Key="mySabelStyle" TargetType="Label">
+            <Setter Property="FontSize" Value="18" />
+            <Setter Property="FontFamily" Value="HP Simplified" />
+            <Setter Property="BorderBrush" Value="Black" />
+        </Style>
+        <Style x:Key="myButtonbackCloseStyle" TargetType="Button">
+            <Setter Property="FontSize" Value="20" />
+            <Setter Property="FontFamily" Value="HP Simplified" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="BorderBrush" Value="Black" />
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="Background" Value="Transparent"/>
+
+        </Style>
+    </Window.Resources>
+
+    <Grid  >
+        <Grid.Background>
+            <ImageBrush ImageSource="/images/lightblue.jpg"
+                        Stretch="UniformToFill"/>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="470*"/>
+            <ColumnDefinition Width="426*"/>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition Width="391*"/>
+            <ColumnDefinition Width="594*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+
+
+
+        </Grid.RowDefinitions>
+        <Button  Content="חזרה" Style="{StaticResource myButtonbackCloseStyle}" x:Name="button_back"  Grid.Row="0" Grid.Column="4"  HorizontalAlignment="Right"     Click="button_back_Click" Margin="0,0,71,0.6" Width="70" />
+        <Button x:Name="button_close" Style="{StaticResource myButtonbackCloseStyle}" Grid.Row="0" Grid.Column="4" Click="Button_OK_Click" VerticalAlignment="Top"  HorizontalAlignment="Right" Content="סגור"   Width="67"  Height="37" />
+
+        <TextBlock x:Name="ordernum" Grid.Column="3"  FontSize="20" Margin="27.8,37.4,0.2,37.4" Grid.RowSpan="3" Grid.Row="1" />
+        <TextBlock Grid.Column="3" Text="פרטי הזמנה:" FontSize="25" Margin="25.8,37,138,0.2" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+        <ComboBox x:Name="CB_orderforhost"  ItemsSource="{Binding}" SelectionChanged="CB_orderforhost_SelectionChanged" SelectedItem=""  VerticalAlignment="Top" Grid.Row="0"  Grid.Column="0" Grid.ColumnSpan="2"  FontSize="20" FontFamily="Segoe Print" Height="38" Margin="0,0,0.2,0" LostFocus="CB_orderforhost_LostFocus" Grid.RowSpan="2" />
+        <Label Style="{StaticResource mySabelStyle}"  Grid.ColumnSpan="2" x:Name="showLabel_totalPrice" Content="מחיר כולל:" Grid.Row="7" Grid.Column="0"  />
+        <TextBox Style="{StaticResource mytxtStyle}"  x:Name="showTxtBx_totalPrice" IsReadOnly="True" Grid.Row="7" HorizontalAlignment="Left"  Width="178" Grid.Column="1" Margin="0.2,0.8,0,37.4" Grid.RowSpan="2" />
+        <Label Style="{StaticResource mySabelStyle}"  x:Name="showLabel_HostingUnitKey" Content="מספר יחידת אירוח:" Grid.Row="1" Grid.Column="0" Grid.RowSpan="4" />
+        <TextBox Style="{StaticResource mytxtStyle}"  x:Name="showTxtBx_HostingUnitKey" IsReadOnly="True" Grid.Row="1"  Grid.RowSpan="4" Grid.Column="1"  />
+        <Label Style="{StaticResource mySabelStyle}" Grid.RowSpan="1" x:Name="showLabel_GuestRequestKey" Content="מספר בקשת אירוח:" Grid.Row="2" Grid.Column="0" />
+        <TextBox Style="{StaticResource mytxtStyle}" Grid.RowSpan="1" x:Name="showTxtBx_GuestRequestKey" IsReadOnly="True" Grid.Row="2"  Grid.Column="1"/>
+        <Label Style="{StaticResource mySabelStyle}"  x:Name="showLabel_OrderKey" Content="מספר הזמנה:" Grid.Row="3" Grid.Column="0" Grid.RowSpan="1"/>
+        <TextBox Style="{StaticResource mytxtStyle}"  x:Name="showTxtBx_OrderKey" IsReadOnly="True" Grid.Row="3"  Grid.RowSpan="1" Grid.Column="1" />
+        <Label Style="{StaticResource mySabelStyle}"  x:Name="showLabel_Status" Content="סטטוס הזמנה:" Grid.Row="6" Grid.Column="0"  Grid.RowSpan="1" />
+        <TextBox Style="{StaticResource mytxtStyle}"  x:Name="showTxtBx_Status" IsReadOnly="True" Grid.Row="6"  Grid.RowSpan="1" Grid.Column="1" />
+        <Label Style="{StaticResource mySabelStyle}"  Grid.RowSpan="1" x:Name="showLabel_CreateDate" Content="תאריך יצירת הזמנה:" Grid.Row="4" Grid.Column="0"/>
+        <TextBox Style="{StaticResource mytxtStyle}"  Grid.RowSpan="1" x:Name="showTxtBx_CreateDate" IsReadOnly="True" Grid.Row="4"  Grid.Column="1"  />
+        <Label Style="{StaticResource mySabelStyle}"    x:Name="showLabel_OrderDate" Content="תאריך יצירת הזמנה:" Grid.Row="5" Grid.Column="0"  Grid.RowSpan="1" />
+        <TextBox Style="{StaticResource mytxtStyle}"    x:Name="showTxtBx_OrderDate" IsReadOnly="True" Grid.Row="5"   Grid.Column="1" Grid.RowSpan="1" />
+
+        <Button x:Name="b_updateOrderStatus"  Content="עדכן הזמנה" FontSize="35" Background="Transparent" BorderBrush="Black" Grid.ColumnSpan="3" Grid.Column="1" Margin="53.2,22.6,10.2,33.6" Grid.Row="9" Grid.RowSpan="4" Click="b_updateOrderStatus_Click"/>
+
+
+
+    </Grid>
+
+</Window>

@@ -1,0 +1,347 @@
+﻿<Window x:Class="UI.clientWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UI"
+
+        mc:Ignorable="d" 
+              
+        Title="clientWindow" Height="891.2" WindowStartupLocation="Manual" Width="1000" WindowStyle="None" Background="LightBlue" >
+    <Window.Resources>
+        <Style x:Key="myButtonStyle" TargetType="Button">
+            <Setter Property="FontSize" Value="25" />
+            <Setter Property="FontFamily" Value="HP Simplified" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="BorderBrush" Value="Black" />
+        </Style>
+        <Style x:Key="mytxtStyle" TargetType="TextBox">
+            <Setter Property="FontSize" Value="18" />
+            <Setter Property="FontFamily" Value="HP Simplified" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="BorderBrush" Value="Black" />
+        </Style>
+        <Style x:Key="mySabelStyle" TargetType="Label">
+            <Setter Property="FontSize" Value="17" />
+            <Setter Property="FontFamily" Value="HP Simplified" />
+            <Setter Property="BorderBrush" Value="Black" />
+        </Style>
+        <Style x:Key="myButtonbackCloseStyle" TargetType="Button">
+            <Setter Property="FontSize" Value="20" />
+            <Setter Property="FontFamily" Value="HP Simplified" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="BorderBrush" Value="Black" />
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="Background" Value="Transparent"/>
+        </Style>
+    </Window.Resources>
+    <Grid  Background="LightBlue" Margin="0,0,-7,-21.8">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="103*"/>
+            <RowDefinition Height="4*"/>
+        </Grid.RowDefinitions>
+
+        <TabControl Background="LightBlue" Margin="0,0,-0.4,0.4" Grid.RowSpan="2">
+            <TabControl.Items>
+                <TabItem Header="יצירת בקשה חדשה" Margin="-2,-2,-61,-5" >
+                    <TabItem.Content>
+
+                        <StackPanel RenderTransformOrigin="0.5,0.5">
+                            <StackPanel.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="-0.013"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </StackPanel.RenderTransform>
+
+
+                            <Grid  x:Name="addgrgrid" Background="LightBlue" Width="1009" Height="840"  >
+
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="5*"/>
+                                    <ColumnDefinition Width="3*"/>
+                                    <ColumnDefinition Width="3*"/>
+                                    <ColumnDefinition Width="2*"/>
+                                    <ColumnDefinition Width="7*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="37*"/>
+                                    <RowDefinition Height="37*"/>
+                                    <RowDefinition Height="37*"/>
+                                    <RowDefinition Height="37*"/>
+                                    <RowDefinition Height="37*"/>
+                                    <RowDefinition Height="37*"/>
+                                    <RowDefinition Height="37*"/>
+                                    <RowDefinition Height="37*"/>
+                                    <RowDefinition Height="37*"/>
+                                    <RowDefinition Height="36*"/>
+                                    <RowDefinition Height="37*"/>
+                                    <RowDefinition Height="37*"/>
+                                    <RowDefinition Height="37*"/>
+                                    <RowDefinition Height="36*"/>
+                                    <RowDefinition Height="36*"/>
+                                    <RowDefinition Height="36*"/>
+                                    <RowDefinition Height="36*"/>
+                                    <RowDefinition Height="36*"/>
+                                    <RowDefinition Height="36*"/>
+                                    <RowDefinition Height="36*"/>
+                                    <RowDefinition Height="37*"/>
+                                    <RowDefinition Height="37*"/>
+                                    <RowDefinition Height="37*"/>
+                                    <RowDefinition Height="37*"/>
+                                </Grid.RowDefinitions>
+
+                                <Button  Content="חזרה" Style="{StaticResource myButtonbackCloseStyle}" x:Name="button_back"  Grid.Row="0" Grid.Column="4"  HorizontalAlignment="Right"     Click="button_back_Click" Margin="0,2,96.8,4.8" Width="70" />
+                                <Button x:Name="button_close" Style="{StaticResource myButtonbackCloseStyle}" Grid.Row="0" Grid.Column="4" Click="Button_OK_Click" VerticalAlignment="Top"  HorizontalAlignment="Right" Content="סגור"   Width="67"  Height="30" Margin="0,2,24.8,0" RenderTransformOrigin="-0.255,0.63" />
+                                <Label x:Name="Label_id" Style="{StaticResource mySabelStyle}" Content="תעודת זהות:" Grid.Row="1" Grid.Column="0"/>
+                                <TextBox x:Name="TxtBx_id" Style="{StaticResource mytxtStyle}" Grid.Column="1" Grid.Row="1" Text="{Binding ID}" MaxLength="9"  LostFocus="TxtBx_id_LostFocus" />
+
+                                <Label x:Name="Label_Header" Style="{StaticResource mySabelStyle}" Content="הוסף את פרטי הבקשה החדשה" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" HorizontalContentAlignment="Center" FontSize="20" FontWeight="Bold"/>
+                                <Label x:Name="Label_mail" Style="{StaticResource mySabelStyle}" Content="מייל:" Grid.Row="4" Grid.Column="0"/>
+                                <TextBox x:Name="TxtBx_mail" Style="{StaticResource mytxtStyle}" Grid.Column="1" Grid.Row="4" MaxLength="25"   Text="{Binding MailAddress}" Grid.ColumnSpan="1"  LostFocus="TxtBx_mail_LostFocus"/>
+                                <Label x:Name="Label_FirstName" Style="{StaticResource mySabelStyle}" Content="שם פרטי:" Grid.Row="2" Grid.Column="0"/>
+                                <TextBox x:Name="TxtBx_FirstName" Style="{StaticResource mytxtStyle}" Grid.Column="1" Grid.Row="2" Text="{Binding PrivateName}"    LostFocus="TxtBx_FirstName_LostFocus" />
+                                <Label x:Name="Label_LastName" Style="{StaticResource mySabelStyle}" Content="שם משפחה:" Grid.Row="3" Grid.Column="0"/>
+                                <TextBox x:Name="TxtBx_LastName" Style="{StaticResource mytxtStyle}" Grid.Column="1" Grid.Row="3" Text="{Binding FamilyName}"   LostFocus="TxtBx_LastName_LostFocus"/>
+                                <Label x:Name="Label_numadults" Style="{StaticResource mySabelStyle}" Content="מספר מבוגרים:" Grid.Row="5" Grid.Column="0"/>
+                                <TextBox x:Name="TxtBx_numadults" Style="{StaticResource mytxtStyle}" Grid.Column="1" Grid.Row="5" Text="{Binding Adults}"   LostFocus="TxtBx_numadults_LostFocus" />
+                                <Label x:Name="Label_numkids" Style="{StaticResource mySabelStyle}" Content="מספר ילדים:" Grid.Row="7" Grid.Column="0"/>
+                                <TextBox x:Name="TxtBx_numkids" Style="{StaticResource mytxtStyle}" Grid.Column="1" Grid.Row="7" Text="{Binding Children}"  LostFocus="TxtBx_numkids_LostFocus"/>
+                                <Label x:Name="Label_pool" Style="{StaticResource mySabelStyle}" Content="בריכה:" Grid.Row="16" Grid.Column="0"/>
+                                <ComboBox x:Name="cb_pool" Text="--Please select--"  IsReadOnly="True" IsEditable="True"  Grid.Column="1" Grid.Row="16" ItemsSource="{Binding Pool}"  Grid.ColumnSpan="1" Margin="0,0,0.2,0" SelectionChanged="cb_pool_SelectionChanged" Height="34" VerticalAlignment="Top" />
+                                <Label x:Name="Label_jacuzzi" Style="{StaticResource mySabelStyle}" Content="גקוזי:" Grid.Row="15" Grid.Column="0"/>
+                                <ComboBox x:Name="cb_jacuzzi" SelectionChanged="cb_jacuzzi_SelectionChanged"  Text="--Please select--"  IsReadOnly="True" IsEditable="True" Grid.Column="1" Grid.Row="15" ItemsSource="{Binding Jacuzzi}"  Grid.ColumnSpan="1" Margin="0.2,0.4,0.45,0.2"  />
+                                <Label x:Name="Label_garden" Style="{StaticResource mySabelStyle}" Content="גינה:" Grid.Row="14" Grid.Column="0"/>
+                                <ComboBox x:Name="cb_garden" SelectionChanged="cb_garden_SelectionChanged" Text="--Please select--"  IsReadOnly="True" IsEditable="True" Grid.Column="1" Grid.Row="14" ItemsSource="{Binding Garden}"  Grid.ColumnSpan="1" Margin="0.2,0.4,0.45,0.2" />
+                                <Label x:Name="Label_entrydate" Style="{StaticResource mySabelStyle}" Content="תאריך כניסה:" Grid.Row="8" Grid.Column="0"/>
+                                <DatePicker  x:Name="DP_entrydate" Text="{Binding EntryDate}" LostFocus="DP_entrydate_LostFocus" Grid.Row="7"  Grid.Column="1"  DisplayDateEnd="2050-01-01" DisplayDateStart="2020-02-08" Height="36" Margin="0,34.8,0.2,0" Grid.RowSpan="3" VerticalAlignment="Top" />
+                                <Label x:Name="Label_releasedate" Style="{StaticResource mySabelStyle}" Content="תאריך יציאה:" Grid.Row="9" Grid.Column="0"/>
+                                <DatePicker x:Name="DP_releasedate" Text="{Binding ReleaseDate}" LostFocus="DP_releasedate_LostFocus"  Grid.Row="9" Grid.Column="1" Grid.ColumnSpan="1" DisplayDateEnd="2050-01-01" DisplayDateStart="2020-02-08"/>
+                                <Button x:Name="Button_Add" Style="{StaticResource myButtonStyle}" Content="הוסף" Grid.ColumnSpan="2" Grid.Row="17"  Click="Button_Add_Click" Margin="0,5.8,0.2,34" Grid.RowSpan="2"  />
+                                <Button x:Name="Button_Cancel" Style="{StaticResource myButtonStyle}" Content="ביטול" Grid.ColumnSpan="2" Grid.Row="18"  Click="Button_Cancel_Click" />
+                                <Button x:Name="Button_OK" Style="{StaticResource myButtonStyle}" Content="סגור" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="19"  Click="Button_OK_Click"/>
+                                <Label x:Name="Label_numbaby" Style="{StaticResource mySabelStyle}" Content="מספר תינוקות:" Grid.Row="6" Grid.Column="0"/>
+                                <TextBox x:Name="TxtBx_numbaby" Style="{StaticResource mytxtStyle}" Grid.Column="1" Grid.Row="6" Text="{Binding baby}"   LostFocus="TxtBx_numbaby_LostFocus"/>
+                                <Label x:Name="Label_area" Style="{StaticResource mySabelStyle}" Content="אזור נופש:" Grid.Row="10" Grid.Column="0"/>
+                                <ComboBox x:Name="cb_area" ItemsSource="{Binding Area}" SelectionChanged="cb_area_SelectionChanged"  Grid.Column="1" Grid.Row="10"  Text="--Please select--"  IsReadOnly="True" IsEditable="True"   Grid.ColumnSpan="1" />
+                                <Label x:Name="Label_subarea" Style="{StaticResource mySabelStyle}" Content="תת אזור נופש:" Grid.Row="11" Grid.Column="0"/>
+                                <ComboBox x:Name="cb_subarea"  SelectionChanged="cb_subarea_SelectionChanged" Grid.Column="1" Grid.Row="11" ItemsSource="{Binding SubArea}"  Grid.ColumnSpan="1" Text="--Please select--"  IsReadOnly="True" IsEditable="True" Margin="0.2,0.4,0.45,0.2"/>
+                                <Label x:Name="Label_childrenatr" Style="{StaticResource mySabelStyle}" Content="אטרקציות לילדים:" Grid.Row="13" Grid.Column="0"/>
+                                <ComboBox x:Name="cb_childrenatr" SelectionChanged="cb_childrenatr_SelectionChanged" Grid.Row="13" ItemsSource="{Binding ChildrensAttractions}" Text="--Please select--"  IsReadOnly="True" IsEditable="True"    Grid.Column="1"  Grid.RowSpan="1"/>
+                                <Label x:Name="Label_type" Style="{StaticResource mySabelStyle}" Content="סוג נופש:" Grid.Row="12" Grid.Column="0"/>
+                                <ComboBox x:Name="cb_type" SelectionChanged="cb_type_SelectionChanged"  Grid.Column="1" Grid.Row="12" ItemsSource="{Binding Type}" Text="--Please select--"  IsReadOnly="True" IsEditable="True"  Grid.ColumnSpan="1" Margin="0.2,0.4,0.45,0.2" />
+                                <Image  Grid.Column="3" Grid.Row="14" Grid.RowSpan="7" Source="/Images/כרטיס ביקור רישמי.jpg" Margin="78.6,9.8,58.8,35.6" Grid.ColumnSpan="2"/>
+                                <Image  Grid.Column="3" Grid.Row="8" Grid.RowSpan="6" Source="/Images/מצגת1.jpg" Margin="78.6,10.4,58.8,25.2" Grid.ColumnSpan="2"/>
+                                <Image  Grid.Column="3" Grid.Row="3" Grid.RowSpan="5" Source="/Images/רנגרים.gif" Margin="78.6,10.4,58.8,24.6" Grid.ColumnSpan="2"/>
+
+                            </Grid>
+
+                        </StackPanel>
+
+                    </TabItem.Content>
+                </TabItem>
+                <TabItem Header="המלונות שלנו" Background="LightBlue" Margin="61.8,-2,-127.2,-5">
+                    <TabItem.Content>
+
+
+                        <StackPanel RenderTransformOrigin="0.5,0.5">
+                            <StackPanel.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="-0.013"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </StackPanel.RenderTransform>
+                            <Grid  x:Name="ourhotels" Background="LightBlue">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="109*"/>
+                                    <ColumnDefinition Width="674*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <ComboBox x:Name="CB_hostingunit" SelectionChanged="CB_hostingunit_SelectionChanged"  LostFocus="CB_hostingunit_LostFocus" ItemsSource="{Binding}" HorizontalAlignment="Stretch" SelectedItem=""  VerticalAlignment="Top"   Grid.Column="0"  FontSize="20" FontFamily="Segoe Print" Margin="0,-2,548.2,-19.2" RenderTransformOrigin="0.498,0.887" Grid.ColumnSpan="2" Height="42" />
+                                <TextBox IsEnabled="False"  Name="tbHostName" HorizontalAlignment="Stretch" TextWrapping="Wrap"  VerticalAlignment="Stretch"  FontFamily="Segoe Print" FontSize="20" Margin="313.6,0,0.2,-19.2" Grid.Column="1" >
+                                    <TextBox.Background>
+                                        <LinearGradientBrush>
+                                            <GradientStop Color="LightSkyBlue"
+                                  Offset="0"/>
+                                            <GradientStop Color="White"
+                                  Offset="1"/>
+                                        </LinearGradientBrush>
+                                    </TextBox.Background>
+                                </TextBox>
+
+                                <Grid  x:Name="ourhu" Background="LightBlue" Margin="0,38,0.4,-565.2" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="77*"/>
+                                        <ColumnDefinition Width="6*"/>
+                                        <ColumnDefinition Width="50*"/>
+                                        <ColumnDefinition Width="50*"/>
+                                        <ColumnDefinition Width="33*"/>
+                                        <ColumnDefinition Width="116*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+
+
+                                        <RowDefinition Height="1*"/>
+                                        <RowDefinition Height="1*"/>
+                                        <RowDefinition Height="1*"/>
+                                        <RowDefinition Height="1*"/>
+                                        <RowDefinition Height="1*"/>
+                                        <RowDefinition Height="1*"/>
+                                        <RowDefinition Height="1*"/>
+                                        <RowDefinition Height="1*"/>
+                                        <RowDefinition Height="1*"/>
+                                        <RowDefinition Height="1*"/>
+                                        <RowDefinition Height="1*"/>
+                                        <RowDefinition Height="1*"/>
+                                    </Grid.RowDefinitions>
+                                    <Button  Style="{StaticResource myButtonbackCloseStyle}" Content="חזרה"  x:Name="button_ourback"  Grid.Row="0" Grid.Column="5"  HorizontalAlignment="Right"  Click="button_back_Click"  Height="40" Margin="0,0,74.2,0.6" Width="70" />
+                                    <Button  Style="{StaticResource myButtonbackCloseStyle}" x:Name="button_ourclose" Grid.Row="0" Grid.Column="5" Click="button_close_Click"  HorizontalAlignment="Right" Content="סגור" Height="40"  Width="70" Margin="0,0,0.2,0.4" />
+
+                                    <Label Style="{StaticResource mySabelStyle}" x:Name="showLabel_mail" Content="מייל:" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" Margin="0,45,142.4,6.8" Grid.RowSpan="2"/>
+                                    <TextBox Style="{StaticResource mytxtStyle}" IsReadOnly="True"  x:Name="showTxtBx_mail" Grid.Column="2" Grid.Row="1" MaxLength="25" Margin="0.2,51.4,0.4,47.8" Grid.RowSpan="3"    />
+                                    <Label Style="{StaticResource mySabelStyle}" x:Name="showLabel_FirstName" Content="שם פרטי:" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Margin="0,0,142.4,45.8" Grid.RowSpan="2"/>
+                                    <TextBox Style="{StaticResource mytxtStyle}" x:Name="showTxtBx_FirstName" Grid.Column="2" IsReadOnly="True" Grid.Row="0" Grid.RowSpan="1" Grid.ColumnSpan="1"    >
+                                        <TextBox.RenderTransform>
+                                            <TransformGroup>
+                                                <ScaleTransform/>
+                                                <SkewTransform/>
+                                                <RotateTransform Angle="0.602"/>
+                                                <TranslateTransform/>
+                                            </TransformGroup>
+                                        </TextBox.RenderTransform>
+                                    </TextBox>
+                                    <Label Style="{StaticResource mySabelStyle}" x:Name="showLabel_LastName" Content="שם משפחה:" Grid.Row="1" Grid.Column="0"  />
+                                    <TextBox Style="{StaticResource mytxtStyle}" IsReadOnly="True" x:Name="showTxtBx_LastName" Grid.Column="2" Grid.Row="1" Margin="0.2,0.4,0.4,0.4"  />
+                                    <Button Style="{StaticResource myButtonStyle}" x:Name="showButton_OK" Content="סגור" Grid.Column="0"  Grid.Row="10"  />
+                                    <Label Style="{StaticResource mySabelStyle}" x:Name="showLabel_phoneNumber" Content="מספר טלפון:" Grid.Row="4" Grid.Column="0"  />
+                                    <TextBox Style="{StaticResource mytxtStyle}" IsReadOnly="True" x:Name="showTxtBx_phoneNumber" Grid.Column="2" Grid.Row="4"  />
+                                    <Label Style="{StaticResource mySabelStyle}" x:Name="showLabel_HostingUnitName" Content="שם המלון:" Grid.Row="2" Grid.Column="0" Margin="0,44.4,0.2,47.8" Grid.RowSpan="3" />
+                                    <TextBox Style="{StaticResource mytxtStyle}" IsReadOnly="True" x:Name="showTxtBx_HostingUnitName" Grid.Column="2" Grid.Row="3" MaxLength="25"    />
+                                    <Label Style="{StaticResource mySabelStyle}" x:Name="showLabel_maxGuest" Content="מספר אורחים מרבי :" Grid.Row="6" Grid.Column="0" />
+                                    <TextBox Style="{StaticResource mytxtStyle}" IsReadOnly="True" x:Name="showTxtBx_maxGuest" Grid.Column="2" Grid.Row="6" MaxLength="25"   />
+                                    <Label Style="{StaticResource mySabelStyle}" x:Name="showLabel_priceAdults" Content="מחיר למבוגר :" Grid.Row="7" Grid.Column="0" Margin="0,36.8,0.2,0.2" Grid.RowSpan="2" />
+                                    <TextBox Style="{StaticResource mytxtStyle}"  IsReadOnly="True" x:Name="showTxtBx_priceAdults" Grid.Column="2" Grid.Row="8" MaxLength="25" />
+                                    <Label Style="{StaticResource mySabelStyle}" x:Name="showLabel_priceChildren" Content="מחיר לילד :" Grid.Row="7" Grid.Column="0"  />
+                                    <TextBox Style="{StaticResource mytxtStyle}" IsReadOnly="True" x:Name="showTxtBx_priceChildren" Grid.Column="2" Grid.Row="7" MaxLength="25"    />
+                                    <Label Style="{StaticResource mySabelStyle}" x:Name="showLabel_subareaHost" Content="תת אזור של המלון:" Grid.Row="5" Grid.Column="0"/>
+                                    <TextBox Style="{StaticResource mytxtStyle}" IsReadOnly="True" x:Name="showcb_subareaHost"  Grid.Column="2" Grid.Row="5"    />
+                                    <Image x:Name="image" HorizontalAlignment="Left" Height="204" Margin="18,45,0,0" Grid.Row="1" Grid.RowSpan="6" VerticalAlignment="Top" Width="310" Grid.ColumnSpan="2" Grid.Column="4"/>
+                                    <Image x:Name="right" Grid.Column="5" ButtonBase.Click="Image_Click_1"  Source="/Images/arrow2.png"   HorizontalAlignment="Left" Height="100" Margin="228.8,17.2,0,0" Grid.Row="3" Grid.RowSpan="3" VerticalAlignment="Top" Width="100" MouseLeftButtonDown="Image_MouseLeftButtonDown_1"/>
+                                    <Image x:Name="left" Grid.Column="3"  ButtonBase.Click="Image_Click" HorizontalAlignment="Left" Source="/Images/arrow4.png" Height="100" Margin="56.6,17.2,0,0" Grid.Row="3" Grid.RowSpan="3" VerticalAlignment="Top" Width="100" MouseLeftButtonDown="Image_MouseLeftButtonDown" Grid.ColumnSpan="2"/>
+                                    <Label Style="{StaticResource mySabelStyle}" x:Name="showLabel_med" Content="ממוצע משובים:" Grid.Row="9" Grid.Column="0" />
+                                    <TextBox Style="{StaticResource mytxtStyle}" IsReadOnly="True" x:Name="showcb_med"  Grid.Column="2" Grid.Row="9"    />
+
+                                </Grid>
+
+                            </Grid>
+
+                        </StackPanel>
+
+                    </TabItem.Content>
+                </TabItem>
+                <TabItem Header="הבקשות שלי" Background="LightBlue" Margin="126,-2,-191.8,-5">
+                    <TabItem.Content>
+
+                        <StackPanel RenderTransformOrigin="0.5,0.5">
+                            <StackPanel.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="-0.013"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </StackPanel.RenderTransform>
+
+                            <Grid Height="388" Margin="0,0,10,0">
+                                <Button Style="{StaticResource myButtonbackCloseStyle}" Content="לחץ להוספת משוב" x:Name="button_zion" VerticalAlignment="Top"  HorizontalAlignment="Left"       Width="194"  Margin="84,578,0,-227" Height="37"   RenderTransformOrigin="-0.168,0.532" Click="button_zion_Click" />
+
+                                <Button Style="{StaticResource myButtonbackCloseStyle}" Content="חזרה" x:Name="button_back1" VerticalAlignment="Top"  HorizontalAlignment="Left"       Width="78"  Margin="818,0,0,0" Height="37" Click="button_back_Click" RenderTransformOrigin="-0.168,0.532" />
+                                <Button Style="{StaticResource myButtonbackCloseStyle}" x:Name="button_close1"  VerticalAlignment="Top"  HorizontalAlignment="Right" Background="Transparent" Content="סגור"   Width="75" Click="button_close_Click" Height="37" Margin="0,0,9.4,0" RenderTransformOrigin="0.028,0.63" />
+                                <TextBlock Margin="10,5,623.4,343" Text="הכנס ת.ז:"  FontSize="30" FontWeight="Bold"/>
+                                <TextBox Margin="159,5,621.8,340" MaxLength="9" Background="Transparent" x:Name="txt_id" FontSize="25" BorderBrush="Black" />
+                                <Button Style="{StaticResource myButtonbackCloseStyle}" x:Name="butten_showgrs" Content="הצג" HorizontalAlignment="Left" Margin="473,5,0,0" VerticalAlignment="Top" Width="129"   FontSize="30" Click="butten_showgrs_Click" />
+                                <Grid Margin="0,72,0.4,-241">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="5*"/>
+                                        <ColumnDefinition Width="3*"/>
+                                        <ColumnDefinition Width="3*"/>
+                                        <ColumnDefinition Width="2*"/>
+                                        <ColumnDefinition Width="7*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+
+                                        <RowDefinition Height="28*"/>
+                                        <RowDefinition Height="27*"/>
+                                        <RowDefinition Height="28*"/>
+                                        <RowDefinition Height="28*"/>
+                                        <RowDefinition Height="28*"/>
+                                        <RowDefinition Height="28*"/>
+                                        <RowDefinition Height="28*"/>
+                                        <RowDefinition Height="27*"/>
+                                        <RowDefinition Height="28*"/>
+                                        <RowDefinition Height="28*"/>
+                                        <RowDefinition Height="28*"/>
+                                        <RowDefinition Height="28*"/>
+                                        <RowDefinition Height="28"/>
+                                        <RowDefinition Height="28*"/>
+                                        <RowDefinition Height="28*"/>
+                                        <RowDefinition Height="28*"/>
+                                        <RowDefinition Height="27*"/>
+                                        <RowDefinition Height="28*"/>
+                                        <RowDefinition Height="27*"/>
+                                        <RowDefinition Height="28*"/>
+                                    </Grid.RowDefinitions>
+                                    <ComboBox ItemsSource="{Binding}" SelectionChanged="cb_grkey_SelectionChanged" x:Name="cb_grkey"  Grid.ColumnSpan="2" HorizontalAlignment="Left" Width="249" />
+                                    <Label Style="{StaticResource mySabelStyle}" x:Name="show_Label_id" Content="תעודת זהות:" Grid.Row="1" Grid.Column="0"/>
+                                    <TextBox  Style="{StaticResource mytxtStyle}" x:Name="show_TxtBx_id1" IsReadOnly="True" Grid.Column="1" Grid.Row="1" Text="{Binding ID}" MaxLength="9"  LostFocus="TxtBx_id_LostFocus"/>
+
+                                    <Label Style="{StaticResource mySabelStyle}"  x:Name="show_Label_mail"  Content="מייל:" Grid.Row="4" Grid.Column="0"/>
+                                    <TextBox  Style="{StaticResource mytxtStyle}" x:Name="show_TxtBx_mail1" IsReadOnly="True" Grid.Column="1" Grid.Row="4" MaxLength="25"   Grid.ColumnSpan="1" />
+                                    <Label Style="{StaticResource mySabelStyle}"  x:Name="show_Label_FirstName" Content="שם פרטי:" Grid.Row="2" Grid.Column="0"/>
+                                    <TextBox  Style="{StaticResource mytxtStyle}" IsReadOnly="True" x:Name="show_TxtBx_FirstName1" Grid.Column="1" Grid.Row="2"  />
+                                    <Label Style="{StaticResource mySabelStyle}"  x:Name="show_Label_LastName" Content="שם משפחה:" Grid.Row="3" Grid.Column="0"/>
+                                    <TextBox  Style="{StaticResource mytxtStyle}" IsReadOnly="True"  x:Name="show_TxtBx_LastName1" Grid.Column="1" Grid.Row="3"   />
+                                    <Label Style="{StaticResource mySabelStyle}" x:Name="show_Label_numadults" Content="מספר מבוגרים:" Grid.Row="5" Grid.Column="0"/>
+                                    <TextBox  Style="{StaticResource mytxtStyle}" IsReadOnly="True" x:Name="show_TxtBx_numadults1" Grid.Column="1" Grid.Row="5"     />
+                                    <Label Style="{StaticResource mySabelStyle}"  x:Name="show_Label_numkids" Content="מספר ילדים:" Grid.Row="7" Grid.Column="0"/>
+                                    <TextBox  Style="{StaticResource mytxtStyle}" IsReadOnly="True" x:Name="show_TxtBx_numkids1" Grid.Column="1" Grid.Row="7"   />
+                                    <Label Style="{StaticResource mySabelStyle}"  x:Name="show_Label_pool" Content="בריכה:" Grid.Row="17" Grid.Column="0"/>
+                                    <TextBox  Style="{StaticResource mytxtStyle}" IsReadOnly="True" x:Name="show_cb_pool1"  Grid.Column="1" Grid.Row="17"   Grid.ColumnSpan="1" Margin="0.2,0.4,0.45,0.2" />
+                                    <Label Style="{StaticResource mySabelStyle}"  x:Name="show_Label_jacuzzi" Content="גקוזי:" Grid.Row="16" Grid.Column="0"/>
+                                    <TextBox  Style="{StaticResource mytxtStyle}" IsReadOnly="True" x:Name="show_cb_jacuzzi1"   Grid.Column="1" Grid.Row="16"   Grid.ColumnSpan="1" Margin="0.2,0.4,0.45,0.2" />
+                                    <Label Style="{StaticResource mySabelStyle}"  x:Name="show_Label_garden" Content="גינה:" Grid.Row="15" Grid.Column="0"/>
+                                    <TextBox  Style="{StaticResource mytxtStyle}" x:Name="show_cb_garden1"  Grid.Column="1" Grid.Row="15" Grid.ColumnSpan="1" Margin="0.2,0.4,0.45,0.2"/>
+                                    <Label Style="{StaticResource mySabelStyle}"  x:Name="show_Label_entrydate" Content="תאריך כניסה:" Grid.Row="8" Grid.Column="0"/>
+                                    <DatePicker  x:Name="show_DP_entrydate1" IsEnabled="False"  HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="7" Margin="0.4,26.8,0,0" Grid.RowSpan="2" Width="164" Height="26" DisplayDateEnd="2050-01-01" DisplayDateStart="2020-02-08" Grid.Column="1" />
+                                    <Label Style="{StaticResource mySabelStyle}"  x:Name="show_Label_releasedate" Content="תאריך יציאה:" Grid.Row="9" Grid.Column="0"/>
+                                    <DatePicker  x:Name="show_DP_releasedate1" IsEnabled="False" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="8" Margin="0.4,27.6,0,0" Width="164" Height="26" Grid.Column="1" Grid.RowSpan="2"/>
+                                    <Label Style="{StaticResource mySabelStyle}"  x:Name="show_Label_numbaby" Content="מספר תינוקות:" Grid.Row="6" Grid.Column="0"/>
+                                    <TextBox  Style="{StaticResource mytxtStyle}" IsReadOnly="True" x:Name="show_TxtBx_numbaby1" Grid.Column="1" Grid.Row="6"   />
+                                    <Label Style="{StaticResource mySabelStyle}"  x:Name="show_Label_area" Content="אזור נופש:" Grid.Row="10" Grid.Column="0"/>
+                                    <TextBox  Style="{StaticResource mytxtStyle}" IsReadOnly="True" x:Name="show_cb_area1"  Grid.Column="1" Grid.Row="10"  Text="{Binding Area}"  Grid.ColumnSpan="1" Margin="0.2,0.4,0.45,0.2" />
+                                    <Label Style="{StaticResource mySabelStyle}"  x:Name="show_Label_subarea" Content="תת אזור נופש:" Grid.Row="11" Grid.Column="0"/>
+                                    <TextBox  Style="{StaticResource mytxtStyle}" IsReadOnly="True" x:Name="show_cb_subarea1"  Grid.Column="1" Grid.Row="11"  Grid.ColumnSpan="1" Margin="0.2,0.4,0.45,0.2"/>
+                                    <Label Style="{StaticResource mySabelStyle}"  x:Name="show_Label_childrenatr"  Content="אטרקציות לילדים:" Grid.Row="14" Grid.Column="0"/>
+                                    <TextBox  Style="{StaticResource mytxtStyle}" IsReadOnly="True" x:Name="show_cb_childrenatr1"  Grid.Row="13" Margin="0.2,0,0.4,0.4"  Height="28" VerticalAlignment="Bottom" Grid.Column="1" Grid.RowSpan="2"/>
+                                    <Label Style="{StaticResource mySabelStyle}"  x:Name="show_Label_type" Content="סוג נופש:" Grid.Row="12" Grid.Column="0" Height="28" Margin="0,0,0.2,0.4" Grid.RowSpan="2" VerticalAlignment="Bottom"/>
+                                    <TextBox Style="{StaticResource mytxtStyle}" IsReadOnly="True" x:Name="show_cb_type1" Grid.Column="1" Grid.Row="13"   Grid.ColumnSpan="1" Margin="0.2,0.4,0.45,0.2" />
+                                    <Image  Grid.Column="3" Grid.ColumnSpan="2" Grid.Row="10" Grid.RowSpan="8" Source="/Images/פרסומת.jpg" Margin="84.6,17.6,30.6,10.6"/>
+                                    <Image  Grid.Column="3" Grid.ColumnSpan="2" Grid.Row="1" Grid.RowSpan="8" Source="/Images/prxun,.jpg" Margin="84.6,25,30.6,2.4"/>
+
+                                </Grid>
+                            </Grid>
+
+                        </StackPanel>
+
+                    </TabItem.Content>
+                </TabItem>
+            </TabControl.Items>
+
+        </TabControl>
+
+    </Grid>
+</Window>

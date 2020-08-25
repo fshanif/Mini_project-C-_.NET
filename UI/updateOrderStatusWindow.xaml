@@ -1,0 +1,36 @@
+﻿<Window x:Class="UI.updateOrderStatusWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UI"
+        mc:Ignorable="d"
+        Title="updateOrderStatusWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen" WindowStyle="None">
+    <Window.Resources>
+
+
+        <Style x:Key="myButtonbackCloseStyle" TargetType="Button">
+            <Setter Property="FontSize" Value="25" />
+            <Setter Property="FontFamily" Value="HP Simplified" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="BorderBrush" Value="Black" />
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="Background" Value="Transparent"/>
+
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/images/lightblue.jpg"
+                        Stretch="UniformToFill"/>
+        </Grid.Background>
+        <TextBlock Text="אנא בחר סטטוס לעדכון:" FontSize="30" Margin="233,44,250.6,320" />
+        <Button  Content="חזרה" Style="{StaticResource myButtonbackCloseStyle}" x:Name="button_back"  Grid.Row="0"  HorizontalAlignment="Right"     Click="button_back_Click" Margin="0,0,70.6,0" Width="70" Height="37" VerticalAlignment="Top" />
+        <Button x:Name="button_close" Style="{StaticResource myButtonbackCloseStyle}" Grid.Row="0" Grid.Column="4" Click="Button_OK_Click" VerticalAlignment="Top"  HorizontalAlignment="Right" Content="סגור"   Width="67"  Height="37" />
+
+        <ComboBox x:Name="cb_statustoUpdate" SelectedItem=""  ItemsSource="{Binding Status}"  Background="Transparent"  Foreground="Black" FontSize="30" Margin="207,139,222.6,223" />
+
+        <Button  Style="{StaticResource myButtonbackCloseStyle}" x:Name="b_update" Click="b_update_Click" Content="עדכן" HorizontalAlignment="Left" Margin="308,259,0,0" Background="Transparent" FontSize="30"  VerticalAlignment="Top" Width="160" Height="70"/>
+        <Image Source="/images/Update1.png" HorizontalAlignment="Left" Height="70" Margin="473,259,0,0" VerticalAlignment="Top" Width="64" MouseLeftButtonDown="Image_MouseLeftButtonDown"/>
+    </Grid>
+</Window>

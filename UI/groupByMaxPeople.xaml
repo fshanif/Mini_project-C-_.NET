@@ -1,0 +1,21 @@
+﻿<Window x:Class="UI.groupByMaxPeople"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UI"
+        mc:Ignorable="d"
+        Title="groupByMaxPeople" Height="450" Width="800" WindowStartupLocation="CenterScreen" WindowStyle="None">
+    <ScrollViewer>
+    <StackPanel x:Name="hugroupingbyarea" Background="LightBlue" >
+        <Grid>
+            <Label x:Name="label" Content="כל בתי האירוח לפי מספר מקסימלי של נופשים:" HorizontalAlignment="Center" Margin="22,32,-68.4,-70.6" VerticalAlignment="Top" Foreground="White" FontSize="35" Width="840"  Height="113"/>
+            <Button  Content="חזרה" Background="Transparent" x:Name="button_ourback"  Grid.Row="0"  HorizontalAlignment="Right"  Click="button_back_Click" Margin="0,0,63.6,37.2" Width="92" Height="38" VerticalAlignment="Bottom" RenderTransformOrigin="-0.057,0.568" />
+            <Image Source="/images/x.jpg" HorizontalAlignment="Left" Height="36" Margin="718,2,0,0" VerticalAlignment="Top" Width="55" MouseLeftButtonDown="Image_MouseLeftButtonDown_1" RenderTransformOrigin="1.279,0.724"/>
+
+
+
+        </Grid>
+    </StackPanel>
+    </ScrollViewer>
+</Window>

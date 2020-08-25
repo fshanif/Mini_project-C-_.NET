@@ -1,0 +1,48 @@
+﻿<Window x:Class="UI.ordersWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UI"
+        mc:Ignorable="d"
+        Title="ordersWindow" Height="518.861" Width="800" Background="LightBlue"  WindowStartupLocation="CenterScreen" WindowStyle="None">
+    <Window.Resources>
+        <Style x:Key="myButtonStyle" TargetType="Button">
+            <Setter Property="FontSize" Value="25" />
+            <Setter Property="FontFamily" Value="HP Simplified" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="BorderBrush" Value="Black" />
+        </Style>
+        <Style x:Key="mytxtStyle" TargetType="TextBox">
+            <Setter Property="FontSize" Value="15" />
+            <Setter Property="FontFamily" Value="HP Simplified" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="BorderBrush" Value="Black" />
+        </Style>
+        <Style x:Key="mySabelStyle" TargetType="Label">
+            <Setter Property="FontSize" Value="18" />
+            <Setter Property="FontFamily" Value="HP Simplified" />
+            <Setter Property="BorderBrush" Value="Black" />
+        </Style>
+        <Style x:Key="myButtonbackCloseStyle" TargetType="Button">
+            <Setter Property="FontSize" Value="20" />
+            <Setter Property="FontFamily" Value="HP Simplified" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="BorderBrush" Value="Black" />
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="Background" Value="Transparent"/>
+
+        </Style>
+    </Window.Resources>
+
+    <Grid x:Name="orderHostingUnit" Margin="0,0,-0.4,-2.4" Height="492" VerticalAlignment="Top">
+
+
+        <Button  HorizontalAlignment="Left" Margin="170,111,0,0" VerticalAlignment="Top" Width="461" Height="110" Content="רשימת הזמנות" FontSize="50" Click="Button_Click" />
+        <Button Content="רשימת לקוחות" HorizontalAlignment="Left" Margin="170,300,0,0" VerticalAlignment="Top" Width="461" Height="110" FontSize="50" Click="Button_Click_1"/>
+
+        <Button  Content="חזרה" Style="{StaticResource myButtonbackCloseStyle}" x:Name="button_back"  Grid.Row="0"  HorizontalAlignment="Right"     Click="button_back_Click" Margin="0,0,71,455" Width="70" />
+        <Button x:Name="button_close" Style="{StaticResource myButtonbackCloseStyle}" Grid.Row="0" Grid.Column="4" Click="Button_OK_Click" VerticalAlignment="Top"  HorizontalAlignment="Right" Content="סגור"   Width="67"  Height="37" />
+
+    </Grid>
+</Window>

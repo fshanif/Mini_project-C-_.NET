@@ -1,0 +1,52 @@
+﻿<Window x:Class="UI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UIWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" WindowStyle="None"  Height="450" Width="800" Background="LightBlue"  WindowState="Maximized" Icon="/Images/egds.jpg">
+
+    <Window.Resources>
+        
+        <LinearGradientBrush x:Key="myLinearGradientBrush">
+            <GradientStop Color="LightBlue"
+                    Offset="0" />
+            <GradientStop Color="White"
+                    Offset="0.5" />
+            <GradientStop Color="LightBlue"
+                    Offset="1" />
+        </LinearGradientBrush>
+
+        <Style x:Key="seeBackground" TargetType ="Button">
+            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="FontFamily" Value="M"/>
+            <Setter Property="BorderBrush" Value="white"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="BorderBrush" Value="Black" />
+                    <Setter Property="BorderThickness" Value="6" />
+                    <Setter Property="Background" Value="Black" />
+                    <Setter Property="VerticalAlignment"
+                    Value="Center"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+
+    <Grid Margin="-2,0,1.6,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <Grid.Background>
+            <ImageBrush ImageSource="/images/egds.jpg"
+                        Stretch="UniformToFill"/>
+        </Grid.Background>
+
+
+        <Button Background="Transparent" BorderBrush="White" x:Name="closebutten" Content="סגור" VerticalAlignment="Top" HorizontalAlignment="Right" Click="closebutten_Click"  Width="100" Height="34" Foreground="White"  FontSize="28" FontWeight="Bold"/>
+        <TextBox x:Name="welcome" HorizontalAlignment="Stretch"  Background="Transparent" Height="84" Margin="14,34,-4.4,0" TextWrapping="Wrap" Text="welcome to shani-elina's site:)" VerticalAlignment="Top" Width="784" FontSize="50" FontFamily="Tahoma" Grid.ColumnSpan="4" FontWeight="Bold" Foreground="White" BorderBrush="Transparent"  />
+        <TextBox x:Name="welcome2" HorizontalAlignment="Center"  Background="Transparent" Height="60" Margin="63,118,50,0" TextWrapping="Wrap" Text="ברוכים הבאים לאתר של אלינא ושני:)" VerticalAlignment="Top" FontSize="36" FontFamily="Tahoma" FontWeight="Bold" Foreground="White" BorderBrush="Transparent"  Width="auto"/>
+        <TextBox x:Name="welcome3" HorizontalAlignment="Center"  Background="Transparent" Height="47" Margin="100,178,99,0" TextWrapping="Wrap" Text="אתר בו תמצאו את כל מבוקשכם" VerticalAlignment="Top" FontSize="36" FontFamily="Tahoma" FontWeight="Bold" Foreground="White" BorderBrush="Transparent"  />
+        <TextBox x:Name="welcome4" HorizontalAlignment="Center"  Background="Transparent" Height="47" Margin="195,230,261,0" TextWrapping="Wrap" Text=" לחופשה הקרובה!" VerticalAlignment="Top" FontSize="36" FontFamily="Tahoma" FontWeight="Bold" Foreground="White" BorderBrush="Transparent"  />
+
+        <Button Style="{StaticResource seeBackground}" x:Name="ButtonSTART" Content="התחלה"  HorizontalAlignment="Center" Margin="517,355,71,0" VerticalAlignment="Top" Height="78" FontSize="60" Click="ButtonSTART_Click"  FontWeight="Bold" Foreground="White"/>
+    </Grid>
+</Window>

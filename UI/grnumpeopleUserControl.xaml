@@ -1,0 +1,69 @@
+﻿<UserControl x:Class="UI.grnumpeopleUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:UI"
+             mc:Ignorable="d" d:DesignWidth="800" Height="192.778" Width="840" MaxWidth="840">
+    <UserControl.Resources>
+        <Style  x:Key="mytxtStyle" TargetType="TextBox">
+            <Setter Property="FontSize" Value="12" />
+            <Setter Property="FontFamily" Value="HP Simplified" />
+            <Setter Property="BorderBrush" Value="Black" />
+            <Setter Property="Height" Value="29" />
+            <Setter Property="Width" Value="110" />
+        </Style>
+
+        <Style x:Key="mySabelStyle" TargetType="Label">
+            <Setter Property="FontSize" Value="12" />
+            <Setter Property="Height" Value="29" />
+            <Setter Property="Width" Value="110" />
+            <Setter Property="FontFamily" Value="HP Simplified" />
+            <Setter Property="BorderBrush" Value="Black" />
+        </Style>
+    </UserControl.Resources>
+    <Grid x:Name="ucguest" Width="840" Height="201" VerticalAlignment="Top" Background="LightBlue" Margin="0,10,-0.4,-51.8" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="430*"/>
+            <ColumnDefinition Width="169.6"/>
+            <ColumnDefinition Width="241*"/>
+        </Grid.ColumnDefinitions>
+        <GroupBox x:Name="groupBox" FlowDirection="RightToLeft" BorderBrush="Black" BorderThickness="3"  Margin="-4,0,-0.4,0" FontWeight="Bold" Height="175" VerticalAlignment="Top" Grid.ColumnSpan="3"/>
+
+        <Label Style="{StaticResource mySabelStyle}"   x:Name="show_Label_mail"  Content="מייל:" Margin="111.4,20,189,152" Grid.Column="1" Grid.ColumnSpan="2" />
+        <TextBox  Style="{StaticResource mytxtStyle}" Text="{Binding Path=MailAddress}" x:Name="show_TxtBx_mail1" IsReadOnly="True" Margin="414,10,53.6,142" Grid.ColumnSpan="2" RenderTransformOrigin="0.496,0.793"   />
+        <Label Style="{StaticResource mySabelStyle}"  x:Name="show_Label_FirstName" Content="שם פרטי:" Margin="134.8,53,-4,119" Grid.Column="2"/>
+        <TextBox  Style="{StaticResource mytxtStyle}" Text="{Binding Path=PrivateName}" IsReadOnly="True" x:Name="show_TxtBx_FirstName1" Margin="20.8,52,110,120" Grid.Column="2"   />
+        <Label Style="{StaticResource mySabelStyle}"  x:Name="show_Label_LastName" Content="שם משפחה:" Margin="132.8,89,-2,83" Grid.Column="2" />
+        <TextBox  Style="{StaticResource mytxtStyle}" Text="{Binding Path=FamilyName}" IsReadOnly="True"  x:Name="show_TxtBx_LastName1" Margin="20.8,86,110,86" Grid.Column="2"    />
+        <Label Style="{StaticResource mySabelStyle}" Background="AliceBlue" x:Name="show_Label_numadults" Content="מספר מבוגרים:" RenderTransformOrigin="0.567,-2.072" Margin="324,19,20.6,153" Width="Auto"/>
+        <TextBox  Style="{StaticResource mytxtStyle}"  BorderBrush="Red"  Text="{Binding Path=Adults}" IsReadOnly="True" x:Name="show_TxtBx_numadults1" Margin="202,20,102.4,152"     />
+        <Label Style="{StaticResource mySabelStyle}" Background="AliceBlue" x:Name="show_Label_numkids" Content="מספר ילדים:" Margin="323,51,20.6,121" Width="Auto"/>
+        <TextBox  Style="{StaticResource mytxtStyle}"  BorderBrush="Red"   Text="{Binding Path=Children}" IsReadOnly="True" x:Name="show_TxtBx_numkids1" Margin="202,51,102.4,121"   />
+        <Label Style="{StaticResource mySabelStyle}"  x:Name="show_Label_pool" Content="בריכה:" Margin="328,125,161.2,47" Grid.ColumnSpan="2" />
+        <TextBox  Style="{StaticResource mytxtStyle}"  Text="{Binding Path=Pool}"  IsReadOnly="True" x:Name="show_cb_pool1" Margin="202,113,102.4,39"      />
+        <Label Style="{StaticResource mySabelStyle}"  x:Name="show_Label_jacuzzi" Content="גקוזי:" Margin="109.4,54,191,118" RenderTransformOrigin="0.858,0.297" Grid.Column="1" Grid.ColumnSpan="2" />
+        <TextBox  Style="{StaticResource mytxtStyle}" Text="{Binding Path=Jacuzzi}" IsReadOnly="True" x:Name="show_cb_jacuzzi1" Margin="425,52,64.2,120" Grid.ColumnSpan="2"   />
+        <Label Style="{StaticResource mySabelStyle}"  x:Name="show_Label_garden" Content="גינה:" Margin="128,89,191.6,83" />
+        <TextBox  Style="{StaticResource mytxtStyle}" Text="{Binding Path=Garden}" x:Name="show_cb_garden1" Margin="5,67,299.4,65" RenderTransformOrigin="0.582,-0.352" />
+        <Label Style="{StaticResource mySabelStyle}"  x:Name="show_Label_entrydate" Content="תאריך כניסה:" Margin="118,2,186.4,130" />
+        <TextBox  Style="{StaticResource mytxtStyle}"  x:Name="show_DP_entrydate1"  Text="{Binding Path=EntryDate}"   Margin="5,20,299.4,150" Height="Auto" />
+        <Label Style="{StaticResource mySabelStyle}"  x:Name="show_Label_releasedate" Content="תאריך יציאה:" Margin="127,57,192.6,115"/>
+        <TextBox  Style="{StaticResource mytxtStyle}" x:Name="show_DP_releasedate1" Text="{Binding Path=ReleaseDate}" Margin="5,36,299.4,96"  />
+        <Label Style="{StaticResource mySabelStyle}" Background="AliceBlue" x:Name="show_Label_numbaby" Content="מספר תינוקות:" Margin="123,123,224.6,49" Width="Auto" />
+        <TextBox  Style="{StaticResource mytxtStyle}"  BorderBrush="Red"  Text="{Binding Path=baby}" IsReadOnly="True" x:Name="show_TxtBx_numbaby1" Margin="13,123,306.6,49"  />
+        <Label Style="{StaticResource mySabelStyle}" Background="Transparent" x:Name="show_Label_area" Content="אזור נופש:" Margin="133.8,20,31,152" Grid.Column="2" Width="Auto"  />
+        <TextBox  Style="{StaticResource mytxtStyle}" IsReadOnly="True" x:Name="show_cb_area1"   Text="{Binding Area}" Margin="20.8,19,110,153" Grid.Column="2" />
+        <Label Style="{StaticResource mySabelStyle}"  x:Name="show_Label_subarea" Content="תת אזור נופש:" Margin="106.4,124,194,48" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <TextBox  Style="{StaticResource mytxtStyle}" Text="{Binding Path=SubArea}" IsReadOnly="True" x:Name="show_cb_subarea1" Margin="414,113,53.6,39" Grid.ColumnSpan="2"   />
+        <Label Style="{StaticResource mySabelStyle}"  x:Name="show_Label_childrenatr"  Content="אטרקציות לילדים:" Margin="324,87,165.2,85" Grid.ColumnSpan="2"/>
+        <TextBox  Style="{StaticResource mytxtStyle}" Text="{Binding Path=ChildrensAttractions}" IsReadOnly="True" x:Name="show_cb_childrenatr1" Margin="202,87,102.4,85"  />
+        <Label Style="{StaticResource mySabelStyle}"  x:Name="show_Label_type" Content="סוג נופש:" Margin="109.4,89,191,83" Grid.Column="1" Grid.ColumnSpan="2" />
+        <TextBox Style="{StaticResource mytxtStyle}" Text="{Binding Path=Type}" IsReadOnly="True" x:Name="show_cb_type1" Margin="414,79,53.6,79" Grid.ColumnSpan="2"  />
+        <Label Style="{StaticResource mySabelStyle}"  x:Name="show_Label_grkey" Content="מספר בקשת ארוח:" Margin="0,125,7,47" Grid.Column="2" HorizontalAlignment="Right" Width="106"  />
+        <TextBox Style="{StaticResource mytxtStyle}" Text="{Binding Path=GuestRequestKey}" IsReadOnly="True" x:Name="show_cb_grkey" Margin="20.8,124,110,48" Grid.Column="2"  />
+
+    </Grid>
+
+
+</UserControl>
