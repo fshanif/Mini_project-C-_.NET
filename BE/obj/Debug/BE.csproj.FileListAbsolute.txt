@@ -1,0 +1,18 @@
+C:\Users\elina\Desktop\c++\מיני פרויקט\פרויקט 2020\PL\BE\bin\Debug\BE.dll
+C:\Users\elina\Desktop\c++\מיני פרויקט\פרויקט 2020\PL\BE\bin\Debug\BE.pdb
+C:\Users\elina\Desktop\c++\מיני פרויקט\פרויקט 2020\PL\BE\obj\Debug\BE.dll
+C:\Users\elina\Desktop\c++\מיני פרויקט\פרויקט 2020\PL\BE\obj\Debug\BE.pdb
+C:\Users\elina\Desktop\c++\מיני פרויקט\שיעור פרויקט\בדיקה\BE\bin\Debug\BE.dll
+C:\Users\elina\Desktop\c++\מיני פרויקט\שיעור פרויקט\בדיקה\BE\bin\Debug\BE.pdb
+C:\Users\elina\Desktop\c++\מיני פרויקט\שיעור פרויקט\בדיקה\BE\obj\Debug\BE.csprojAssemblyReference.cache
+C:\Users\elina\Desktop\c++\מיני פרויקט\שיעור פרויקט\בדיקה\BE\obj\Debug\BE.dll
+C:\Users\elina\Desktop\c++\מיני פרויקט\שיעור פרויקט\בדיקה\BE\obj\Debug\BE.pdb
+C:\Users\elina\Desktop\c++\מיני פרויקט\שיעור פרויקט\מעודכן אחרי הגשה 2\BE\bin\Debug\BE.dll
+C:\Users\elina\Desktop\c++\מיני פרויקט\שיעור פרויקט\מעודכן אחרי הגשה 2\BE\bin\Debug\BE.pdb
+C:\Users\elina\Desktop\c++\מיני פרויקט\שיעור פרויקט\מעודכן אחרי הגשה 2\BE\obj\Debug\BE.dll
+C:\Users\elina\Desktop\c++\מיני פרויקט\שיעור פרויקט\מעודכן אחרי הגשה 2\BE\obj\Debug\BE.pdb
+C:\Users\elina\Desktop\c++\מיני פרויקט\שיעור פרויקט\סוף סופי סופני סוף\BE\bin\Debug\BE.dll
+C:\Users\elina\Desktop\c++\מיני פרויקט\שיעור פרויקט\סוף סופי סופני סוף\BE\bin\Debug\BE.pdb
+C:\Users\elina\Desktop\c++\מיני פרויקט\שיעור פרויקט\סוף סופי סופני סוף\BE\obj\Debug\BE.csprojAssemblyReference.cache
+C:\Users\elina\Desktop\c++\מיני פרויקט\שיעור פרויקט\סוף סופי סופני סוף\BE\obj\Debug\BE.dll
+C:\Users\elina\Desktop\c++\מיני פרויקט\שיעור פרויקט\סוף סופי סופני סוף\BE\obj\Debug\BE.pdb

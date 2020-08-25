@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<allConfig>
+  <GuestRequestKeyCode>10000006</GuestRequestKeyCode>
+  <HostingUnitKeyCode>10000006</HostingUnitKeyCode>
+  <ExpireRequest>35</ExpireRequest>
+  <OrderKeyCode>10000000</OrderKeyCode>
+  <fee>10</fee>
+</allConfig>
